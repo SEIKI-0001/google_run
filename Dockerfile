@@ -7,4 +7,5 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /app
 COPY sample_hello.py .
 
+# フレームワーク依存なし
 CMD ["python", "sample_hello.py"]
