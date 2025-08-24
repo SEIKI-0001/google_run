@@ -18,10 +18,11 @@ class Handler(BaseHTTPRequestHandler):
         else:
             self._send(404, '{"error": "not found"}')
 
-    # 不要なら消してOK（ここでは許可）
     def log_message(self, fmt, *args):
         # Cloud Run のログに出す
-        print("%s - - [%s] %s" % (self.client_address[0], self.log_date_time_string(), fmt % args))
+        print("%s - - [%s] %s" % (self.client_address[0],
+                                  self.log_date_time_string(),
+                                  fmt % args))
 
 if __name__ == "__main__":
     server = HTTPServer(("0.0.0.0", PORT), Handler)
