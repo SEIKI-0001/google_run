@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify
 from datetime import datetime, timedelta
 from dataclasses import dataclass
 from typing import List, Tuple, Optional
-from google.cloud import storage
 import pandas as pd
 import json
 import os
